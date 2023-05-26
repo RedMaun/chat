@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="header">
+        <div id="leftModule">
+            <a href="/" id="slrchat">СЬЛРЖАЛСЧ чат</a>
+            <a id="reg" href="/registration">Регистрация</a>
+            <a id="log" href="/login">Логин</a>
+        </div>
+    </div>
+    <div class="space" style="background-color: transparent;"></div>
+    <div class="reg-cont">
+        <div class="reg-title">Логин</div>
+        <form id="form" method="post" action="/api/user/login">
+            <input type="text" placeholder="Your name" name="name" class="nameReg">
+            <input type="password" placeholder="Your pass" name="password" class="password">
+            <button class="confirm" type="submit">Подтвердить</button>
+        </form>
+    </div>
+</body>
+</html>

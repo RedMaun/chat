@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../public/css/images-grid.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1c40832f28.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="leftModule">
+            <a href="https://github.com/RedMaun/slrchat" id="slrchat">Чат</a>
+        </div>
+        <div id="rightModule">
+            <div id="header-name"></div>
+            <div id="header-avatar" onclick="$('#uploadAvatar').click()"></div>
+            <a href="/api/user/exit">
+                <button id="exit">Выход</button>
+            </a>
+            <input type="file" onchange="loadAvatar(this)" id="uploadAvatar" style="display: none;"/>
+        </div>
+    </div>
+
+    <div id="avatarChange">
+		<div id="field">
+			<img id="croppingImage" src="">
+			<div id="0" class="dot" style="left: 0px; top: 0px; cursor: nwse-resize; "></div>
+			<div id="1" class="dot" style="left: 200px; top: 0px; cursor: nesw-resize;"></div>
+			<div id="2" class="dot" style="left: 0px; top: 200px; cursor: nesw-resize;"></div>
+			<div id="3" class="dot" style="left: 200px; top: 200px; cursor: nwse-resize;"></div>
+			<div id="crop-box"></div>
+		</div>
+        <canvas id="canvas" style="display:none; border-radius: 500px"></canvas>
+        <div id="buttCont">
+            <button id="closePreAvatar" onclick="closeChange()">Назад</button>
+            <button id="fieldButton" onclick="result()">Сохранить и продолжить</button>
+        </div>        
+	</div>
+
+    <div id="sPlug"></div>
+    <div class="space" style="height: 40px !important"></div>
+    <div id="messages"></div>
+    <div id="indicator"></div>
+    <form id="trigger" action="">
+        <div id="replyDisplay"></div>
+        <input type="file" onchange="loadImage()" id="upload" multiple="multiple"/>
+        <div id="oneLine">
+            <button id="uploadButton" type="button" onclick="$('#upload').click(); textspace.focus()">
+                <i id="paperClip" class="fa-solid fa-paperclip fa-2x"></i>
+            </button>
+            <input id="textspace" placeholder="Напишите сообщение..." autocomplete="off" />
+            <button type="submit" id="send">
+            </button>
+        </div>
+        <div id="filesDisplay"></div>
+    </form>
+    <div id="plug"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../public/js/images-grid.js"></script>
+    <script src="../public/js/message.js"></script>
+    <script src="../public/js/main.js"></script>
+    <script src="../public/js/avatar.js"></script>
+    <script>loadLastMessages(cookieData)</script>
+</body>
+</html>

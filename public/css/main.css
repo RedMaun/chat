@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root
+{
+    color-scheme: dark;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: #D7DADC;
+    background-color: #000000;
+    overflow-y: scroll;
+}
+
+.space
+{
+    display: block;
+    height: 120px;
+    background-color: #1a1a1a;
+}
+#header
+{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 56;
+    background-color: #181818;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+#rightModule, #leftModule
+{ 
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: auto;
+}
+
+#rightModule
+{
+    top: 0px;
+    right: 0px;
+}
+
+#leftModule
+{
+    top: 0px;
+    left: 0px;
+}
+
+#header-name
+{
+    margin-right: 10px;
+    line-height: 40px;
+}
+
+#header-avatar
+{
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+#header-avatar img, .avatar img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+#exit
+{
+    margin-right: 10px;
+    background-color: #ff6600;
+    border: none;
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#messages
+{
+    width: 550px;
+    height: auto;
+    display: block;
+    margin: auto;
+    background-color: #1a1a1a;
+    padding-top: 20px;
+}
+
+.mess
+{
+    padding: 40px;
+    display: block;
+    position: relative;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #1a1a1a;
+}
+
+#indicator
+{
+    height: 20px;
+    display: block;
+    width: 550px;
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: #1a1a1a;
+}
+
+.title
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.titleReply
+{
+    display: block;
+    height: 20px;
+}
+
+.avatar
+{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.name, .time
+{
+    display: inline-block;
+}
+.name
+{
+    color: #ff6600;
+    font-size: 16px;
+}
+
+.time
+{
+    margin-left: 5px;
+    color: #aeaeae;
+    font-size: 13px;
+}
+
+.timeReply
+{
+    color: transparent;
+}
+.textReply
+{
+    display: block;  
+    margin-top: 2px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.contentReply
+{
+    margin-top: 0px;
+}
+
+.reply
+{
+    width: 20px;
+    height: 20px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    outline: none;
+    display: none;
+    background-color: transparent;
+}
+
+.content .text
+{
+    line-height: 100%;
+    display: block;  
+    margin-top: 4px;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-size: 15.5px;
+}
+
+.images img
+{
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.messReply
+{
+    position: relative;
+    margin-top: 4px;
+    padding-left: 10px;
+    border-left: 1px solid #757575;
+    margin-bottom: 10px;
+    display: block;
+    height: auto;
+    cursor: pointer;
+}
+.messReply:hover
+{
+    border-left: 1px solid #c5c5c5;
+}
+
+.rightCont
+{
+    display: block;
+    height: auto;
+    width: 400px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.nameReply
+{
+    display: inline-block;
+    color: #ff954f;
+    font-size: 14.5px;
+}
+
+.fa
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: #979797;
+}
+
+#trigger
+{
+    z-index: 17;
+    width: 550px;
+    height: auto;
+    background-color: #222222;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    right: 50%;
+    margin-left: -275px;
+    margin-bottom: 25px;
+}
+
+#plug
+{
+    height: 40px;
+    width: 1020%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 15;
+    background-color: #000000;
+}
+
+#upload
+{
+    display: none;
+}
+
+#uploadButton
+{
+    display: inline;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 6px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#textspace
+{
+    border-radius: 6px;
+    width: 430px;
+    margin: 0px;
+    height: 16px;
+    border: 1px solid #2a2a2a;
+    background-color: #4a4a4a42;
+    outline: none;
+    padding: 10px;
+    display: inline;
+    color: #D7DADC
+}
+
+#send
+{
+    display: none;
+}
+
+
+#oneLine
+{
+    position: relative;
+    border-radius: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #222222;
+}
+
+#paperClip
+{
+    color: #D7DADC; 
+    cursor: pointer;
+}
+
+#paperClip:hover
+{
+    color: #ffffff; 
+}
+
+.loaded
+{
+    padding-bottom: 10px;
+    margin-left: 20px;
+    height: auto;
+    overflow: none;
+    word-break: break-all;
+}
+
+.buttClose, #buttCloseReply
+{
+    height: 15px;
+    width: 15px;
+    margin-left: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+#buttCloseReply
+{   
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#replyDisplay
+{
+    background-color: #222222;
+    height: auto;
+    display: block;
+}
+
+.centered
+{
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+
+#filesDisplay
+{
+    padding-bottom: 5px;
+}
+
+#slrchat
+{
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    line-height: 40px;
+}
+
+#reg, #log
+{
+    text-decoration: none;
+    color: #ff6600;
+    line-height: 30px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#reg:hover, #log:hover
+{
+    background-color: #2a2a2a;  
+}
+
+#spce
+{
+    max-width: 100%;
+    display: block;
+}
+
+.reg-cont
+{
+    margin: auto;
+    display: block;
+    width: 350px;
+    height: auto;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+}
+
+.nameReg, .password
+{
+    display: block;
+    height: 20px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+    background: #1e1e1e;
+    outline: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#form
+{
+    display: block;
+}
+
+.reg-title
+{
+    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.confirm
+{
+    margin-top: 5px;
+    background-color: #414141;
+    border: 1px solid #2a2a2a;
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+#sPlug
+{
+    position: absolute;
+    width: 550px;
+    height: 100%;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -275px;
+    background-color: #1a1a1a;
+}
+
+.dot
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    color: blue;
+    z-index: 101;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+#field
+{
+    max-width: 500px; 
+    max-height: 500px; 
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 100;
+}
+
+#field img
+{
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    z-index: 100;
+
+}
+#croppingImage
+{
+    margin: auto;
+}
+
+#crop-box 
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 210px;
+    height: 210px;  
+    background-color: rgba(255, 0, 0, 0.3);
+    /* border-radius: 500px; */
+    /* border: 1px solid black; */
+    z-index: 100;
+}
+
+#avatarChange
+{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    left: 50%;
+    width: 500px;
+    height: auto;
+    padding: 50px;
+    padding-bottom: 30px;
+    top: 50px;
+    margin-left: -300px;
+    box-shadow: 0px 0px 1px 100vmax rgba(0, 0, 0, 0.5)
+}
+
+#closePreAvatar, #fieldButton
+{
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#fieldButton
+{
+    margin-left: 10px;
+    background-color: #ff6600;
+}
+
+#fieldButton:hover, #closePreAvatar:hover
+{
+    filter: brightness(90%);
+}
+
+#buttCont
+{
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;
+}
